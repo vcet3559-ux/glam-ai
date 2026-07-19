@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-white dark:bg-dark text-gray-900 dark:text-white transition-colors duration-300;
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply bg-white/10 dark:bg-gray-900/10 backdrop-blur-glass border border-white/20 dark:border-gray-800/20;
+}
+
+/* Gradient utilities */
+.gradient-text {
+  @apply bg-gradient-primary bg-clip-text text-transparent;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
+
+/* Loading animation */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    @apply opacity-100;
+  }
+  50% {
+    @apply opacity-50;
+  }
+}
+
+.pulse-glow {
+  @apply animate-pulse;
+}
